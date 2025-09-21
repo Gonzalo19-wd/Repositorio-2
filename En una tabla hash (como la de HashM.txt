@@ -1,0 +1,22 @@
+En una tabla hash (como la de HashMap en Java), la complejidad temporal depende de la operación y de cómo se manejen las colisiones.
+Operaciones principales:
+
+Inserción (put)
+
+Promedio: O(1) → la función hash calcula el índice y guarda el valor directamente.
+
+Peor caso: O(n) → si todas las claves caen en el mismo “bucket” (colisiones), se forma una lista o árbol dentro de la casilla, y habría que recorrerlo.
+
+Búsqueda (get)
+
+Promedio: O(1) → se calcula el índice y se accede rápido.
+
+Peor caso: O(n) → si hay demasiadas colisiones y todo se concentra en un solo bucket.
+
+Eliminación (remove)
+
+Igual que inserción y búsqueda:
+
+Promedio: O(1)
+
+Peor caso: O(n)
