@@ -42,7 +42,7 @@ public class TablaHash {
                         System.out.print("Ingrese una clave: ");
                         String nuevaClave = sc.nextLine();
                         usuarios.put(nuevoUsuario, hashClave(nuevaClave));
-                        System.out.println("✅ Usuario registrado con éxito.");
+                        System.out.println("Usuario registrado");
                     }
                     break;
 
@@ -55,9 +55,9 @@ public class TablaHash {
 
                     String claveHash = hashClave(clave);
                     if (usuarios.containsKey(usuario) && usuarios.get(usuario).equals(claveHash)) {
-                        System.out.println("✅ Bienvenido, " + usuario + "!");
+                        System.out.println("Bienvenido, " + usuario + "!");
                     } else {
-                        System.out.println("❌ Usuario o clave incorrectos.");
+                        System.out.println("Usuario o clave incorrectos.");
                     }
                     break;
                 case 0:
