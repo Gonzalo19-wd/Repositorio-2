@@ -1,0 +1,18 @@
+Tabla hash para búsqueda externa
+
+
+En lugar de almacenar los datos directamente en memoria, la tabla hash almacena referencias (direcciones, punteros o bloques de disco) donde están los datos reales.
+Así, el hash de la clave indica en qué bloque de disco se debe buscar.
+
+Funcionamiento:
+Se calcula la función hash sobre la clave.
+El resultado indica en qué bloque de disco se encuentra (o debería encontrarse) el registro.
+
+Luego, solo se lee ese bloque (en lugar de recorrer todo el archivo), reduciendo muchísimo el tiempo de acceso.
+
+Caso biblioteca
+Supongamos que tenemos millones de libros:
+La clave puede ser el ISBN del libro.
+El hash de ese ISBN indica el bloque en disco.
+Dentro de ese bloque están todos los libros que colisionaron (misma fila hash).
+Así, si busco el ISBN 978-3-16-148410-0, no tengo que revisar todos los libros, solo el bloque que le corresponde.
