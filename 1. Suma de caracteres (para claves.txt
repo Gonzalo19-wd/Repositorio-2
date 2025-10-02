@@ -1,0 +1,26 @@
+1. Suma de caracteres (para claves tipo texto)
+
+Muy simple: sumar los valores ASCII de cada carácter de la clave y aplicar módulo con el tamaño de la tabla.
+
+private int funcionHash(String clave, int tam) {
+    int suma = 0;
+    for (int i = 0; i < clave.length(); i++) {
+        suma += clave.charAt(i);
+    }
+    return suma % tam;
+}
+
+Útil para nombres, títulos de libros, usuarios.
+Puede generar colisiones si hay muchas palabras con las mismas letras en diferente orden.
+
+2. Hash de multiplicación (para claves numéricas)
+
+Se basa en una constante fraccionaria (generalmente (√5 - 1)/2 ≈ 0.618).
+
+private int funcionHash(int clave, int tam) {
+    double A = 0.6180339887; // constante recomendada
+    return (int)(tam * ((clave * A) % 1));
+}
+
+
+Buena distribución para enteros grandes (ej: DNI, ISBN, ID de usuario).
