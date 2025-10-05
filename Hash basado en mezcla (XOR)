@@ -5,3 +5,4 @@ private int funcionHash(String clave, int tam) {
     }
     return Math.abs(hash) % tam;
 }
+// estos solo requiere del nombre y lo transmforma en algun numero basado en las letras y amenos aue el nombre contenga las mismas letras se repetira
