@@ -1,0 +1,15 @@
+Árboles B y B+ (los más comunes)
+
+🔹 Uso principal: índices en bases de datos relacionales.
+🔹 Tipo de búsqueda: jerárquica y ordenada.
+🔹 Cómo funciona:
+Los registros se organizan en nodos ordenados (como un árbol balanceado).
+Cuando buscas un dato (por ejemplo, un ID o clave primaria), el motor baja por el árbol comparando rangos hasta llegar al nodo que contiene el valor.
+
+Búsqueda promedio: O(log n)
+
+Ventajas: soporta búsqueda secuencial (rangos) y mantiene los datos ordenados.
+
+Ejemplo: índices en MySQL InnoDB usan árboles B+.
+
+🧩 B+ tree = versión mejorada del B-tree donde todas las claves reales están en las hojas, lo que mejora búsquedas y recorridos secuenciales.
