@@ -1,0 +1,16 @@
+2. Tablas Hash (hash indexing)
+
+🔹 Uso principal: búsquedas exactas (clave → valor).
+🔹 Cómo funciona:
+Aplica una función hash sobre la clave (ej. nombre, ID, código) para obtener una dirección en memoria (o en un bloque de disco).
+La búsqueda accede directamente al registro sin recorrer estructuras intermedias.
+
+Búsqueda promedio: O(1)
+
+Usos:
+
+Índices hash en PostgreSQL.
+
+Caches en memoria (Redis, Memcached).
+
+⚠️ No son buenos para búsquedas por rango (ej. “edad > 30”).
